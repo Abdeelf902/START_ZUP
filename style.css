@@ -1,0 +1,253 @@
+html, body {
+    padding:0;
+    margin:0;
+  }
+  nav {
+    padding:10px;
+    background:#000;
+  }
+
+header {width: 100%;
+    position: fixed;
+background-color: white}
+#enterprise{ margin-top: 80px;}
+#STARTZUP{
+    box-shadow:inset;
+}
+hr{
+border-top: 5px solid #d4e2bf;
+width : 300px;
+}
+#entrance{
+    float:left;
+}
+#qualiopi{
+    float:right;
+}
+
+article, #MOIS {
+    height: 34px;
+    width: 158px;
+    background: skyblue;
+    text-align: center;
+    align-items: center;
+     position:relative;
+     display: inline-flex;
+     justify-content: space-around;
+     border-radius: 30px;
+}
+ /* FOOTER */
+.dynamic-footer {
+    position:absolute;
+    width:100%;
+    height:100px;   /* Hauteur du pied de page */
+ }
+ svg{
+  padding: 25px;
+  margin: auto;
+}
+.svggroup{
+  display: flex;
+  justify-content: center;
+}
+
+ .greyside{
+    background-color: #43403F;
+    width:100%;
+    height: 150px;
+ }
+ .orangeside{
+    height: 100px;
+    background-color: #de471A;
+    width:100%;
+ }
+  /* FIN FOOTER */
+  /* timeline formation */
+  #timeline-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow-x: auto;
+  }
+
+  article {
+    flex: 0 0 auto;
+    padding: 20px;
+    background-color: #5ce5e5;  
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+    margin-right: 20px;
+  }
+
+  article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 20px; /* Largeur de la barre */
+    height: 2px;
+    background-color: #ccc;
+    z-index: -1;
+    transform: translateY(-50%);
+  }
+
+  h2 {
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .MOIS {
+    font-style: italic;
+  }
+/* Menu de navigation*/
+ 
+header { 
+    height: 60px; line-height: 60px;
+    margin: 0 auto;
+    border: 2px solid #e58f5c;
+    text-align:end;
+    }
+header h1 { float:left;
+    width: 40% ;
+    margin: 0;
+    text-align: left;
+    }
+header h1 a { text-decoration: none;
+    }
+a{ text-decoration: none;
+  color:#e58f5c}
+header ul { float: right;
+    list-style-type: none;
+    margin:0; padding:0;
+    width: 60%;
+    font-size: 30px;
+    }
+header ul li { display: inline-block;
+    margin-left: 250px;
+    }
+nav {
+    display:inline-block;
+}
+ 
+  #logo {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.logo {
+    width: 100px;
+    height: 100px;
+    }
+.message{
+  color: #e58f5c;
+   margin-top: 80px;
+   text-align: center;
+}
+title.start{
+    color: #e58f5c;
+     margin-block-end: 100px;
+     display: inline-block;
+
+  }
+h1#enterprise{color: #e58f5c ;}
+h4#who {color: #e58f5c;}
+h1.faq{ margin-top: 0px;}
+
+/* contact */
+.marker{
+    position: absolute;
+    top: 46%;
+    left: 13%;
+    margin-left: 203px;
+    animation-name: bounce;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+    border: 8px solid #e58f5c;
+    width: 8px;
+    height: 8px;
+}
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 113vh;
+    a {
+      padding: 30px;
+      background: teal;
+      color: #fff;
+      font-weight: bold;
+      font-size: 24px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+  .modal {
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+  
+    &.open {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+    
+  }
+  .modal-container {
+    border-radius: 10px;
+    position: absolute;
+    padding: 30px;
+    
+    box-sizing: border-box; /*Pour que le padding et la bordure ne s'ajoutent pas à la taille du conteneur*/
+    top: 60%; /* Pour centrer le conteneur verticalement*/
+    left: 50%; /* Pour centrer le conteneur horizontalement*/
+    transform: translate(-50%, -50%); /*Pour ajuster la position du conteneur selon sa taille*/
+    z-index: 1; /* Pour donner une priorité d'affichage au conteneur par rapport au fond*/
+  }
+  .modal-close {
+    position: absolute;
+    right: 308px;
+    top: 237px;   
+    font-size: large;
+    outline: none;
+    appearance: none;
+    color: red;
+    background: none;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+  
+  }
+  .modal-bg {
+     position: absolute;
+     background: teal;
+     width: 100%;
+     height:100%;
+     
+     
+     pointer-events:none; /* Pour désactiver les événements de souris sur le fond*/
+  }
+  
+        .marker::after {
+            position: absolute;
+            content: '';
+            width: 0px;
+            height: 7px;
+            bottom: -36px;
+            left: -76%;
+            border: 10px solid transparent;
+            border-top: 17px solid #e58f5c;
+        }
+      @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-23px); }
+        100% { transform: translateY(-12px); }
+      }
